@@ -12,7 +12,7 @@ import UIKit
 class MBColorLabel: UIView {
 
     var label = UILabel()
-    
+    let padding : CGFloat = 10
     @IBInspectable
     var labelText:String = "Label" {
         didSet {
@@ -28,14 +28,14 @@ class MBColorLabel: UIView {
     }
     
     @IBInspectable
-    var fontSize:CGFloat = CGFloat(17.0) {
+    var fontName:String = "Arial" {
         didSet {
             updateView()
         }
     }
     
     @IBInspectable
-    var fontName:String = "Arial" {
+    var multiLien : Bool = false {
         didSet {
             updateView()
         }
@@ -49,18 +49,21 @@ class MBColorLabel: UIView {
     }
 
     func updateView() {
-        label.frame = self.bounds
-        label.center = self.center
-        label.font = UIFont(name: fontName, size: fontSize)
+        label.font = UIFont(name: fontName, size: 0)
         label.text = labelText
         label.textColor = textColor
         label.textAlignment = .center
         
-        let minRadiuc = min(frame.width,frame.height)
         let circleRadius = (frame.width>frame.height) ? frame.height : frame.width
-        label.layer.cornerRadius = circleRadius/2
+        label.layer.cornerRadius = ((circleRadius/2)  - padding)
         label.layer.masksToBounds = true
-        label.sizeToFit()
+        
+        label.numberOfLines = (multiLien) ? 0 : 1
+        label.adjustsFontSizeToFitWidth = true;
+        label.minimumScaleFactor = 0.01
+        label.textAlignment = .center
+        label.baselineAdjustment = .alignCenters;
+        label.font = label.font.withSize(circleRadius)
         
         addSubview(label)
         
@@ -72,7 +75,11 @@ class MBColorLabel: UIView {
         
     }
     
-//    override func draw(_ rect: CGRect) {
-//        // Drawing code
-//    }
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+        var circleFrameSize = min(frame.width,frame.height)
+        circleFrameSize = circleFrameSize - (2*padding)
+        label.frame = CGRect(x: padding, y: padding, width: circleFrameSize, height: circleFrameSize)
+        label.center = CGPoint(x: frame.width/2, y: frame.height/2)
+    }
 }

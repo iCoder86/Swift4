@@ -18,21 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaf-4I-gK5" customClass="MBColorLabel" customModule="MBColorLabel" customModuleProvider="target">
-                                <rect key="frame" x="67" y="214" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="87" y="248" width="201" height="171"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Hello"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Multi Line asdf asdf asd fsdf asdf asdf adsfads fadssdfa sdfasd fas dfasd fasd fasd fasdf asd fasd fasdf Mehul"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                        <color key="value" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Helvetica Neue"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="multiLien" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -42,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23.199999999999999" y="29.23538230884558"/>
+            <point key="canvasLocation" x="21.739130434782609" y="26.90217391304348"/>
         </scene>
     </scenes>
 </document>
